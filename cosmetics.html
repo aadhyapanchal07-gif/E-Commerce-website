@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Fashion World | Kids Cosmetics</title>
+
+<link href="https://fonts.googleapis.com/css2family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#FFF0F6,#FFE4EC,#F3E5F5,#E1F5FE);
+
+overflow-x:hidden;
+
+}
+
+/* HEADER */
+
+header{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+z-index:1000;
+
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#EC407A;
+
+}
+
+.logo span{
+
+color:#42A5F5;
+
+}
+
+nav{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#555;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#EC407A;
+
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:80px 8%;
+
+flex-wrap:wrap;
+
+background:linear-gradient(135deg,#FFF8FB,#FCE4EC);
+
+}
+
+.hero-text{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.hero-text h1{
+
+font-size:58px;
+
+color:#EC407A;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:35px;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+.shop-btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#42A5F5;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+background:#EC407A;
+
+}
+
+
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-15px);}
+
+100%{transform:translateY(0);}
+
+}
+
+section{
+
+padding:70px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+color:#EC407A;
+
+margin-bottom:40px;
+
+}
+
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.categories a{
+
+text-decoration:none;
+
+padding:15px 28px;
+
+background:#42A5F5;
+
+color:white;
+
+border-radius:50px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.categories a:hover{
+
+background:#EC407A;
+
+}
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:translateY(-10px);
+
+}
+
+.product img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+margin:20px 0;
+
+font-size:24px;
+
+}
+
+.price{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#EC407A;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:gray;
+
+font-size:18px;
+
+}
+
+.buy{
+
+display:inline-block;
+
+margin:20px;
+
+padding:14px 30px;
+
+background:#42A5F5;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+}
+
+.buy:hover{
+
+background:#EC407A;
+
+}
+
+footer{
+
+background:#AD1457;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+margin-top:60px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.hero-text h1{
+
+font-size:34px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+ Beauty<span>Kids</span>
+
+</div>
+
+<nav>
+
+<a href="index.html"> Home</a>
+
+<a href="#lipbalm"> Lip Balm</a>
+
+<a href="#shampoo"> Shampoo</a>
+
+<a href="#soap"> Soap</a>
+
+<a href="#offers"> Offers</a>
+
+</nav>
+
+</header>
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+ Kids Cosmetics Collection
+
+</h1>
+
+<p>
+
+Welcome to our safe and colourful Kids Cosmetics Collection!
+
+<br><br>
+
+Discover gentle skincare and personal care products
+specially made for children.
+
+<br><br>
+
+ Natural Lip Balms
+
+<br>
+
+ Baby Shampoos
+
+<br>
+
+ Soft Bath Soaps
+
+<br>
+
+ Skin Care Products
+
+<br>
+
+ 100% Safe & Dermatologically Tested
+
+</p>
+
+<a href="#collection" class="shop-btn">
+ Shop Cosmetics
+</a>
+</div>
+</section>
+
+<!-- ================= CATEGORY BUTTONS ================= -->
+
+<section>
+
+<h2 class="title">
+
+ Shop by Category
+
+</h2>
+
+<div class="categories">
+
+<a href="#lipbalm">
+
+ Lip Balms
+
+</a>
+
+<a href="#shampoo">
+
+ Shampoos
+
+</a>
+
+<a href="#soap">
+
+ Bath Soaps
+
+</a>
+
+<a href="#cream">
+
+ Baby Creams
+
+</a>
+
+<a href="#powder">
+
+ Baby Powder
+
+</a>
+
+<a href="#kit">
+
+ Gift Sets
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;">
+
+<h2 style="font-size:42px;color:#EC407A;">
+
+ Gentle Care for Little Smiles 
+
+</h2>
+
+<p style="margin-top:25px;
+font-size:20px;
+line-height:40px;
+color:#555;">
+
+ Skin-Friendly Ingredients
+
+<br><br>
+
+ Natural & Safe Formula
+
+<br><br>
+
+ Designed Especially for Kids
+
+<br><br>
+
+ Soft Fragrance
+
+<br><br>
+
+ Trusted by Parents
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COLLECTION INTRO ================= -->
+
+<section id="collection">
+
+<h2 class="title">
+
+ Featured Beauty Collection
+
+</h2>
+
+<p style="text-align:center;
+font-size:20px;
+line-height:38px;
+color:#666;
+max-width:900px;
+margin:auto;">
+
+Explore our premium collection of kids' beauty and personal care products.
+
+From nourishing lip balms and gentle shampoos
+to soft bath soaps, baby creams and gift kits,
+every product is made with love to care for your little one's delicate skin.
+
+</p>
+
+</section>
+
+<!-- ================= HOME BUTTON ================= -->
+
+<section style="text-align:center;">
+
+<a href="index.html"
+
+style="background:#EC407A;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">
+
+ Back to Home
+
+</a>
+
+</section>
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+ Kids Cosmetics Collection
+
+</h1>
+
+<p>
+
+Welcome to our safe and colourful Kids Cosmetics Collection!
+
+<br><br>
+
+Discover gentle skincare and personal care products
+specially made for children.
+
+<br><br>
+
+ Natural Lip Balms
+
+<br>
+
+ Baby Shampoos
+
+<br>
+
+ Soft Bath Soaps
+
+<br>
+
+ Skin Care Products
+
+<br>
+
+ 100% Safe & Dermatologically Tested
+
+</p>
+
+<a href="#collection" class="shop-btn">
+
+ Shop Cosmetics
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9w=900"
+alt="Kids Cosmetics">
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORY BUTTONS ================= -->
+
+<section>
+
+<h2 class="title">
+
+ Shop by Category
+
+</h2>
+
+<div class="categories">
+
+<a href="#lipbalm">
+
+ Lip Balms
+
+</a>
+
+<a href="#shampoo">
+
+ Shampoos
+
+</a>
+
+<a href="#soap">
+
+ Bath Soaps
+
+</a>
+
+<a href="#cream">
+
+ Baby Creams
+
+</a>
+
+<a href="#powder">
+
+ Baby Powder
+
+</a>
+
+<a href="#kit">
+
+ Gift Sets
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;">
+
+<h2 style="font-size:42px;color:#EC407A;">
+
+ Gentle Care for Little Smiles 
+
+</h2>
+
+<p style="margin-top:25px;
+font-size:20px;
+line-height:40px;
+color:#555;">
+
+ Skin-Friendly Ingredients
+
+<br><br>
+
+ Natural & Safe Formula
+
+<br><br>
+
+ Designed Especially for Kids
+
+<br><br>
+
+ Soft Fragrance
+
+<br><br>
+
+ Trusted by Parents
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COLLECTION INTRO ================= -->
+
+<section id="collection">
+
+<h2 class="title">
+
+ Featured Beauty Collection
+
+</h2>
+
+<p style="text-align:center;
+font-size:20px;
+line-height:38px;
+color:#666;
+max-width:900px;
+margin:auto;">
+
+Explore our premium collection of kids' beauty and personal care products.
+
+From nourishing lip balms and gentle shampoos
+to soft bath soaps, baby creams and gift kits,
+every product is made with love to care for your little one's delicate skin.
+
+</p>
+
+</section>
+
+<!-- ================= HOME BUTTON ================= -->
+
+<section style="text-align:center;">
+
+<a href="index.html"
+
+style="background:#EC407A;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">
+
+ Back to Home
+
+</a>
+
+</section>
+<!-- ================= LIP BALMS ================= -->
+
+<section id="lipbalm">
+
+<h2 class="title">Kids Lip Balms</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700" alt="Strawberry Lip Balm">
+
+<h3>Strawberry Lip Balm</h3>
+
+<p></p>
+
+<div class="price">199 <span class="old">199</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=700" alt="Cherry Lip Balm">
+
+<h3>Cherry Lip Balm</h3>
+
+<p></p>
+
+<div class="price">249 <span class="old">349</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=700" alt="Vanilla Lip Balm">
+
+<h3>Vanilla Lip Balm</h3>
+
+<p></p>
+
+<div class="price">229 <span class="old">329</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=700" alt="Natural Lip Balm">
+
+<h3>Natural Lip Balm</h3>
+
+<p></p>
+
+<div class="price">279 <span class="old">379</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SHAMPOOS ================= -->
+
+<section id="shampoo">
+
+<h2 class="title">Baby Shampoos</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700" alt="Baby Shampoo">
+
+<h3>Gentle Baby Shampoo</h3>
+
+<p></p>
+
+<div class="price">349 <span class="old">499</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?w=700" alt="Kids Shampoo">
+
+<h3>Fruity Kids Shampoo</h3>
+
+<p></p>
+
+<div class="price">399 <span class="old">549</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=700" alt="Herbal Shampoo">
+
+<h3>Herbal Shampoo</h3>
+
+<p></p>
+
+<div class="price">449 <span class="old">599</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=700" alt="Natural Shampoo">
+
+<h3>Natural Kids Shampoo</h3>
+
+<p></p>
+
+<div class="price">499 <span class="old">699</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BATH SOAPS ================= -->
+
+<section id="soap">
+
+<h2 class="title">Bath Soaps</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?w=700" alt="Baby Soap">
+
+<h3>Baby Bath Soap</h3>
+
+<p></p>
+
+<div class="price">149 <span class="old">249</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=700" alt="Milk Soap">
+
+<h3>Milk Cream Soap</h3>
+
+<p></p>
+
+<div class="price">179 <span class="old">279</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=700" alt="Aloe Soap">
+
+<h3>Aloe Vera Soap</h3>
+
+<p></p>
+
+<div class="price">229 <span class="old">329</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BABY CREAMS ================= -->
+
+<section id="cream">
+
+<h2 class="title">Baby Creams</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=700" alt="Skin Cream">
+
+<h3>Soft Skin Cream</h3>
+
+<p></p>
+
+<div class="price">349 <span class="old">499</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BABY POWDER ================= -->
+
+<section id="powder">
+
+<h2 class="title">Baby Powder</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?w=700" alt="Baby Powder">
+
+<h3>Gentle Baby Powder</h3>
+
+<p></p>
+
+<div class="price">199 <span class="old">299</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=700" alt="Natural Powder">
+
+<h3>Natural Baby Powder</h3>
+
+<p></p>
+
+<div class="price">249 <span class="old">349</span></div>
+
+<a href="#" class="buy">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BEAUTY GIFT SETS ================= -->
+
+<section id="kit">
+
+<h2 class="title"> Kids Beauty Gift Sets</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=700" alt="Beauty Kit">
+
+<h3> Princess Beauty Kit</h3>
+
+<p></p>
+
+<div class="price">
+
+899 <span class="old">1299</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=700" alt="Kids Gift Set">
+
+<h3> Cute Care Gift Box</h3>
+
+<p></p>
+
+<div class="price">
+
+1099 <span class="old">1499</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=700" alt="Beauty Products">
+
+<h3> Mini Beauty Collection</h3>
+
+<p></p>
+
+<div class="price">
+
+1299 <span class="old">1799</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= BEAUTY SALE ================= -->
+
+<section id="offers">
+
+<div style="
+background:linear-gradient(90deg,#EC407A,#F06292,#BA68C8,#42A5F5);
+padding:60px;
+border-radius:30px;
+text-align:center;
+color:white;
+">
+
+<h2 style="font-size:48px;">
+
+ BEAUTY MEGA SALE 
+
+</h2>
+
+
+<p style="
+font-size:22px;
+line-height:42px;
+margin-top:20px;
+">
+
+ Flat 50% OFF
+
+<br>
+
+ Buy 2 Products & Get 1 Free
+
+<br>
+
+ Free Delivery Above 999
+
+<br>
+
+ Special Gifts For Kids
+
+</p>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= SAFETY MESSAGE ================= -->
+
+<section>
+
+<div style="
+background:white;
+padding:45px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;
+">
+
+
+<h2 style="
+font-size:40px;
+color:#EC407A;
+">
+
+ Parent's Trust Promise
+
+</h2>
+
+
+<p style="
+margin-top:20px;
+font-size:20px;
+line-height:40px;
+color:#555;
+">
+
+ Gentle Products For Kids
+
+<br>
+
+ Safe Ingredients
+
+<br>
+
+ Skin Friendly Formula
+
+<br>
+
+ Quality Tested Products
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section>
+
+
+<h2 class="title">
+
+ Contact Us
+
+</h2>
+
+
+<div style="
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;
+">
+
+
+<p style="
+font-size:20px;
+line-height:40px;
+color:#555;
+">
+
+
+ Kids Fashion World
+
+<br>
+
+ Ahmedabad, Gujarat
+
+<br>
+
+ +91 7862830984
+
+<br>
+
+ aadhyapanchal07@gmail.com
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<h2 style="font-size:36px;">
+
+ Beauty Kids Store
+
+</h2>
+
+
+<p style="margin-top:20px;">
+
+Beautiful Care For Beautiful Smiles! 
+
+</p>
+
+
+<p style="margin-top:15px;">
+
+Designed with by Aadhya Panchal
+
+</p>
+
+
+<p style="margin-top:15px;">
+
+© 2026 Kids Fashion World. All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+</body>
+
+</html>

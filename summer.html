@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Fashion World | Summer Collection</title>
+
+<link href="https://fonts.googleapis.com/css2family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#FFF9C4,#FFE0B2,#B3E5FC);
+
+overflow-x:hidden;
+
+}
+
+/* HEADER */
+
+header{
+
+position:sticky;
+
+top:0;
+
+background:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+z-index:999;
+
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#ff9800;
+
+}
+
+.logo span{
+
+color:#03A9F4;
+
+}
+
+nav{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#555;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ff9800;
+
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:80px 8%;
+
+flex-wrap:wrap;
+
+background:linear-gradient(135deg,#FFFDE7,#FFF3E0);
+
+}
+
+.hero-text{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+
+color:#ff9800;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:35px;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+.shop-btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#03A9F4;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+background:#ff9800;
+
+}
+
+.hero-image{
+
+flex:1;
+
+text-align:center;
+
+min-width:320px;
+
+}
+
+.hero-image img{
+
+width:90%;
+
+max-width:500px;
+
+animation:float 4s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+/* SECTION */
+
+section{
+
+padding:70px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+color:#ff9800;
+
+margin-bottom:40px;
+
+}
+
+/* CATEGORY BUTTONS */
+
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.categories a{
+
+text-decoration:none;
+
+background:#03A9F4;
+
+color:white;
+
+padding:15px 28px;
+
+border-radius:50px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.categories a:hover{
+
+background:#ff9800;
+
+}
+
+/* PRODUCT GRID */
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:translateY(-10px);
+
+}
+
+.product img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+margin:20px 0;
+
+font-size:24px;
+
+}
+
+.price{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#ff9800;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:gray;
+
+font-size:18px;
+
+}
+
+.buy{
+
+display:inline-block;
+
+margin:20px;
+
+padding:14px 30px;
+
+background:#03A9F4;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+}
+
+.buy:hover{
+
+background:#ff9800;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#37474F;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+margin-top:60px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.hero-text h1{
+
+font-size:34px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+ Summer<span>Kids</span>
+
+</div>
+
+<nav>
+
+<a href="index.html"> Home</a>
+
+<a href="#tshirts"> T-Shirts</a>
+
+<a href="#shorts"> Shorts</a>
+
+<a href="#caps"> Caps</a>
+
+<a href="#offers"> Offers</a>
+
+</nav>
+
+</header>
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+ Summer Collection 2026
+
+</h1>
+
+<p>
+
+Welcome to the happiest summer shopping destination for kids!
+
+<br><br>
+
+Discover cool cotton clothes, colourful T-shirts,
+cute dresses, shorts, caps, sandals,
+sunglasses and beach wear specially designed
+to keep children comfortable during sunny days.
+
+<br><br>
+
+ Soft Cotton Fabric
+
+<br>
+
+ Beach Fashion
+
+<br>
+
+ Trendy Summer Style
+
+<br>
+
+ Premium Quality
+
+</p>
+
+<a href="#collection" class="shop-btn">
+
+ Shop Summer Collection
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=900"
+alt="Summer Collection">
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORY BUTTONS ================= -->
+
+<section>
+
+<h2 class="title">
+
+ Summer Categories
+
+</h2>
+
+<div class="categories">
+
+<a href="#tshirts">
+ T-Shirts
+</a>
+
+<a href="#shorts">
+ Shorts
+</a>
+
+<a href="#dresses">
+ Dresses
+</a>
+
+<a href="#caps">
+ Caps
+</a>
+
+<a href="#sandals">
+ Sandals
+</a>
+
+<a href="#beach">
+ Beach Wear
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= SUMMER MESSAGE ================= -->
+
+<section>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;">
+
+<h2 style="font-size:42px;color:#ff9800;">
+
+ Stay Cool This Summer 
+
+</h2>
+
+<p style="margin-top:25px;
+font-size:21px;
+line-height:40px;
+color:#555;">
+
+ Lightweight Cotton Clothes
+
+<br><br>
+
+ Bright Colourful Designs
+
+<br><br>
+
+ Soft Fabric For Sensitive Skin
+
+<br><br>
+
+ Comfortable All Day
+
+<br><br>
+
+ Perfect For Holidays & Picnics
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COLLECTION INTRO ================= -->
+
+<section id="collection">
+
+<h2 class="title">
+
+ Featured Summer Collection
+
+</h2>
+
+<p style="text-align:center;
+font-size:20px;
+color:#666;
+line-height:38px;
+max-width:900px;
+margin:auto;">
+
+Explore our premium summer collection for boys,
+girls and babies.
+
+Find stylish T-shirts, comfortable shorts,
+beautiful frocks, colourful caps,
+lightweight sandals and beach outfits,
+all designed to make every summer day fun and fashionable.
+
+</p>
+
+</section>
+
+<!-- ================= HOME BUTTON ================= -->
+
+<section style="text-align:center;">
+
+<a href="index.html"
+
+style="background:#ff9800;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">
+
+ Back to Home
+
+</a>
+
+</section>
+<!-- ================= SUMMER T-SHIRTS ================= -->
+
+<section id="tshirts">
+
+<h2 class="title"> Summer T-Shirts</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=700" alt="T-Shirt">
+<h3> Cartoon T-Shirt</h3>
+<p></p>
+<div class="price">499 <span class="old">799</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=700" alt="Cotton T-Shirt">
+<h3>Cotton T-Shirt</h3>
+<p></p>
+<div class="price">599 <span class="old">899</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Printed Tee">
+<h3>Printed Tee</h3>
+<p></p>
+<div class="price">699 <span class="old">999</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700" alt="Summer Tee">
+<h3>Cool Summer Tee</h3>
+<p></p>
+<div class="price">549 <span class="old">799</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SHORTS ================= -->
+
+<section id="shorts">
+
+<h2 class="title">Summer Shorts</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700" alt="Shorts">
+<h3>Denim Shorts</h3>
+<p></p>
+<div class="price">699 <span class="old">999</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=700" alt="Cotton Shorts">
+<h3>Cotton Shorts</h3>
+<p></p>
+<div class="price">599 <span class="old">899</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=700" alt="Beach Shorts">
+<h3> Beach Shorts</h3>
+<p></p>
+<div class="price">799 <span class="old">1199</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Kids Shorts">
+<h3> Cartoon Shorts</h3>
+<p></p>
+<div class="price">649 <span class="old">949</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SUMMER DRESSES ================= -->
+
+<section id="dresses">
+
+<h2 class="title"> Summer Dresses</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700" alt="Dress">
+<h3> Floral Dress</h3>
+<p></p>
+<div class="price">999 <span class="old">1499</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=700" alt="Dress">
+<h3> Party Dress</h3>
+<p></p>
+<div class="price">1199 <span class="old">1699</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700" alt="Dress">
+<h3> Cotton Dress</h3>
+<p></p>
+<div class="price">899 <span class="old">1299</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Dress">
+<h3> Rainbow Dress</h3>
+<p></p>
+<div class="price">999 <span class="old">1499</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+</div>
+
+</section>
+<!-- ================= SUMMER CAPS ================= -->
+
+<section id="caps">
+
+<h2 class="title"> Summer Caps</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?w=700" alt="Cap">
+<h3> Cartoon Cap</h3>
+<p></p>
+<div class="price">399 <span class="old">599</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700" alt="Cap">
+<h3> Sun Protection Cap</h3>
+<p></p>
+<div class="price">499 <span class="old">699</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SANDALS ================= -->
+
+<section id="sandals">
+
+<h2 class="title"> Summer Sandals</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700" alt="Sandals">
+<h3> Rainbow Sandals</h3>
+<p></p>
+<div class="price">699 <span class="old">999</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=700" alt="Sandals">
+<h3> Beach Sandals</h3>
+<p></p>
+<div class="price">799 <span class="old">1099</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BEACH WEAR ================= -->
+
+<section id="beach">
+
+<h2 class="title"> Beach Collection</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=700" alt="Beach Wear">
+<h3> Beach Outfit</h3>
+<p></p>
+<div class="price">999 <span class="old">1499</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700" alt="Beach Dress">
+<h3> Beach Dress</h3>
+<p></p>
+<div class="price">1199 <span class="old">1699</span></div>
+<a href="#" class="buy"> Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SUMMER SALE ================= -->
+
+<section id="offers">
+
+<div style="background:linear-gradient(90deg,#FFD54F,#FF9800,#29B6F6);
+padding:60px;
+border-radius:30px;
+text-align:center;
+color:white;">
+
+<h2 style="font-size:48px;">
+
+ SUMMER MEGA SALE 
+
+</h2>
+
+<p style="font-size:22px;line-height:40px;margin-top:20px;">
+
+ Flat 50% OFF
+
+<br>
+
+ Buy 2 Get 1 FREE
+
+<br>
+
+ Free Delivery Above 999
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section>
+
+<h2 class="title"> Contact Us</h2>
+
+<div style="background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);">
+
+<p style="font-size:20px;line-height:38px;color:#555;">
+
+ Kids Fashion World
+
+<br>
+
+ Ahmedabad, Gujarat
+
+<br>
+
+ +91 7862830984
+
+<br>
+
+ aadhyapanchal07@gmail.com
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2 style="font-size:36px;">
+
+ Summer Collection
+
+</h2>
+
+<p style="margin-top:20px;">
+
+Thank you for visiting our Summer Store! 
+
+</p>
+
+<p style="margin-top:15px;">
+
+Designed with  by Aadhya Panchal
+
+</p>
+
+<p style="margin-top:15px;">
+
+© 2026 Kids Fashion World
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

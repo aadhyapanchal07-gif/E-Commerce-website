@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Fashion World | Shoes Collection</title>
+
+<link href="https://fonts.googleapis.com/css2family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#E3F8FF,#FFF4D6,#FFE4F3);
+
+overflow-x:hidden;
+
+}
+
+/* Header */
+
+header{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+z-index:1000;
+
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#00BCD4;
+
+}
+
+.logo span{
+
+color:#ff4fa2;
+
+}
+
+nav{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#555;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ff4fa2;
+
+}
+
+/* Hero */
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:80px 8%;
+
+flex-wrap:wrap;
+
+background:linear-gradient(135deg,#ffffff,#f5fcff);
+
+}
+
+.hero-text{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.hero-text h1{
+
+font-size:58px;
+
+color:#00BCD4;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:35px;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+.shop-btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#ff4fa2;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+background:#00BCD4;
+
+}
+
+.hero-image{
+
+flex:1;
+
+text-align:center;
+
+min-width:320px;
+
+}
+
+.hero-image img{
+
+width:90%;
+
+max-width:500px;
+
+animation:float 4s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+/* Section */
+
+section{
+
+padding:70px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+color:#ff4fa2;
+
+margin-bottom:40px;
+
+}
+
+/* Categories */
+
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.categories a{
+
+text-decoration:none;
+
+padding:15px 30px;
+
+background:#00BCD4;
+
+color:white;
+
+border-radius:50px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.categories a:hover{
+
+background:#ff4fa2;
+
+}
+
+/* Product Cards */
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:translateY(-10px);
+
+}
+
+.product img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+margin:20px 0;
+
+font-size:24px;
+
+}
+
+.price{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#ff4fa2;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:gray;
+
+font-size:18px;
+
+}
+
+.buy{
+
+display:inline-block;
+
+margin:20px;
+
+padding:14px 30px;
+
+background:#00BCD4;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+}
+
+.buy:hover{
+
+background:#ff4fa2;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#3b275f;
+
+color:white;
+
+padding:40px;
+
+text-align:center;
+
+margin-top:60px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.hero-text h1{
+
+font-size:34px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+ Kids<span>Shoes</span>
+
+</div>
+
+<nav>
+
+
+
+
+
+
+
+<a href="index.html">Home</a>
+
+<a href="#sports">Sports</a>
+
+<a href="#school">School</a>
+
+<a href="#sandals">Sandals</a>
+
+<a href="#offers">Offers</a>
+
+</nav>
+
+</header><!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Kids Shoes Collection</h1>
+
+        <p>
+
+            Welcome to our colourful shoe collection!
+            <br><br>Discover comfortable, stylish and durable shoes
+            specially designed for active little feet.
+
+            <br><br>Sports Shoes
+            <br>School Shoes
+            <br>Party Shoes
+            <br> Sandals
+            <br>Rain Boots<br>Casual Sneakers</p>
+
+        <a href="#collection" class="shop-btn">Shop Now</a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
+        alt="Kids Shoes">
+
+    </div>
+
+</section>
+
+<!-- ================= CATEGORY BUTTONS ================= -->
+
+<section>
+
+<h2 class="title">Shop by Category</h2>
+
+<div class="categories">
+
+<a href="#sports">Sports Shoes</a>
+
+<a href="#school">School Shoes</a>
+
+<a href="#sandals">Sandals</a>
+
+<a href="#party">Party Shoes</a>
+
+<a href="#boots">Rain Boots</a>
+
+<a href="#casual">Casual Shoes</a>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+text-align:center;">
+
+<h2 style="color:#00BCD4;
+font-size:42px;">Why Kids Love Our Shoes</h2>
+
+<p style="margin-top:25px;
+font-size:20px;
+line-height:38px;
+
+color:#555;">
+Lightweight & Comfortable
+<br><br>
+Soft Cushioned Sole
+<br><br>
+Attractive Cartoon Designs
+<br><br>
+Waterproof Options Available
+<br><br>
+Perfect for Running & Playing
+<br><br>
+Affordable Prices</p>
+
+</div>
+
+</section>
+
+<!-- ================= COLLECTION INTRO ================= -->
+
+<section id="collection">
+
+<h2 class="title">Featured Shoe Collection</h2>
+
+<p style="text-align:center;
+font-size:20px;
+line-height:38px;
+color:#666;
+max-width:900px;
+margin:auto;">
+Browse our latest collection of kids' footwear.
+Choose from school shoes, sneakers, sandals,
+rain boots, sports shoes and party shoes,
+all made with premium quality materials
+to keep your child comfortable throughout the day.</p>
+
+</section>
+
+<!-- ================= HOME BUTTON ================= -->
+
+<section style="text-align:center;">
+
+<a href="index.html"
+
+style="background:#ff4fa2;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">Back to Home</a>
+
+</section>
+<!-- ================= SPORTS SHOES ================= -->
+
+<section id="sports">
+
+<h2 class="title">Sports Shoes</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Sports Shoe">
+<h3>Running Shoes</h3>
+<p></p>
+<div class="price">999 <span class="old">1499</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700" alt="Sneakers">
+<h3>Cartoon Sneakers</h3>
+<p></p>
+<div class="price">899 <span class="old">1299</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=700" alt="Sports Shoe">
+<h3>Football Shoes</h3>
+<p></p>
+<div class="price">1299 <span class="old">1799</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=700" alt="Sports Shoe">
+<h3>Basketball Shoes</h3>
+<p></p>
+<div class="price">1399 <span class="old">1899</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SCHOOL SHOES ================= -->
+
+<section id="school">
+
+<h2 class="title">School Shoes</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700" alt="School Shoe">
+<h3>Black School Shoe</h3>
+<p></p>
+<div class="price">799 <span class="old">1099</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=700" alt="School Shoe">
+<h3>Leather School Shoe</h3>
+<p></p>
+<div class="price">899 <span class="old">1299</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=700" alt="School Shoe">
+<h3>Premium School Shoe</h3>
+<p></p>
+<div class="price">999 <span class="old">1399</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="School Shoe">
+<h3>Smart School Shoe</h3>
+<p></p>
+<div class="price">899 <span class="old">1199</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SANDALS ================= -->
+
+<section id="sandals">
+
+<h2 class="title">Sandals</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=700" alt="Sandals">
+<h3>Summer Sandals</h3>
+<p></p>
+<div class="price">699 <span class="old">999</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700" alt="Sandals">
+<h3>Fashion Sandals</h3>
+<p></p>
+<div class="price">799 <span class="old">1099</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=700" alt="Sandals">
+<h3>Colour Sandals</h3>
+<p></p>
+<div class="price">699 <span class="old">999</span></div>
+<a href="#" class="buy">Buy Now</a>
+</div>
+
+</div>
+
+</section>
+<!-- ================= PARTY SHOES ================= -->
+
+<section id="party">
+
+<h2 class="title"> Party Shoes</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700">
+
+<h3> Princess Party Shoes</h3>
+
+<p></p>
+
+<div class="price">
+
+1299 <span class="old">1799</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700">
+
+<h3> Boys Party Shoes</h3>
+
+<p></p>
+
+<div class="price">
+
+1199 <span class="old">1699</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RAIN BOOTS ================= -->
+
+<section id="boots">
+
+<h2 class="title"> Rain Boots</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=700">
+
+<h3> Rainbow Rain Boots</h3>
+
+<p></p>
+
+<div class="price">
+
+999 <span class="old">1499</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=700">
+
+<h3>Waterproof Boots</h3>
+
+<p></p>
+
+<div class="price">
+
+1099 <span class="old">1599</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= OFFER ================= -->
+
+<section id="offers">
+
+<div style="background:linear-gradient(90deg,#00BCD4,#4CAF50,#FF9800,#FF4FA2);
+padding:60px;
+border-radius:30px;
+text-align:center;
+color:white;">
+
+<h2 style="font-size:48px;">
+
+ Super Kids Shoe Sale 
+
+</h2>
+
+<p style="font-size:22px;
+margin-top:20px;
+line-height:40px;">
+
+ Flat 50% OFF
+
+<br>
+
+ Buy 2 Pairs & Get 1 Pair FREE
+
+<br>
+
+ Free Delivery Across India
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section>
+
+<h2 class="title"> Contact Us</h2>
+
+<div style="background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+text-align:center;">
+
+<p style="font-size:20px;
+line-height:40px;
+color:#555;">
+
+ Kids Fashion World
+
+<br>
+
+ Ahmedabad, Gujarat
+
+<br>
+
+ +91 7862830984
+
+<br>
+
+ aadhyapanchal07@gmail.com
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2 style="font-size:36px;">
+
+ Kids Shoes Store
+
+</h2>
+
+<p style="margin-top:20px;">
+
+Thank you for shopping with us! 
+
+</p>
+
+<p style="margin-top:15px;">
+
+Designed with  by Aadhya Panchal
+
+</p>
+
+<p style="margin-top:15px;">
+
+© 2026 Kids Fashion World
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Fashion World | Monsoon Collection</title>
+
+<link href="https://fonts.googleapis.com/css2family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#D6F4FF,#E8F8F5,#F5FDFF);
+
+overflow-x:hidden;
+
+}
+
+/* HEADER */
+
+header{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+z-index:1000;
+
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#0288D1;
+
+}
+
+.logo span{
+
+color:#26C6DA;
+
+}
+
+nav{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#555;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#0288D1;
+
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:80px 8%;
+
+flex-wrap:wrap;
+
+background:linear-gradient(135deg,#FFFFFF,#E1F5FE);
+
+}
+
+.hero-text{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.hero-text h1{
+
+font-size:58px;
+
+color:#0288D1;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:35px;
+
+color:#555;
+
+margin-bottom:30px;
+
+}
+
+.shop-btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#0288D1;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+background:#26C6DA;
+
+}
+
+.hero-image{
+
+flex:1;
+
+text-align:center;
+
+min-width:320px;
+
+}
+
+.hero-image img{
+
+width:90%;
+
+max-width:500px;
+
+animation:float 4s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-15px);}
+
+100%{transform:translateY(0);}
+
+}
+
+section{
+
+padding:70px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+color:#0288D1;
+
+margin-bottom:40px;
+
+}
+
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.categories a{
+
+text-decoration:none;
+
+padding:15px 28px;
+
+background:#0288D1;
+
+color:white;
+
+border-radius:50px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.categories a:hover{
+
+background:#26C6DA;
+
+}
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:translateY(-10px);
+
+}
+
+.product img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+margin:20px 0;
+
+font-size:24px;
+
+}
+
+.price{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#0288D1;
+
+}
+
+.old{
+
+text-decoration:line-through;
+
+color:gray;
+
+font-size:18px;
+
+}
+
+.buy{
+
+display:inline-block;
+
+margin:20px;
+
+padding:14px 30px;
+
+background:#0288D1;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+}
+
+.buy:hover{
+
+background:#26C6DA;
+
+}
+
+footer{
+
+background:#0D47A1;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+margin-top:60px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.hero-text h1{
+
+font-size:34px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+ Monsoon<span>Kids</span>
+
+</div>
+
+<nav>
+
+<a href="index.html"> Home</a>
+
+<a href="#raincoats"> Raincoats</a>
+
+<a href="#boots"> Boots</a>
+
+<a href="#umbrellas"> Umbrellas</a>
+
+<a href="#offers"> Offers</a>
+
+</nav>
+
+</header><!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+ Monsoon Collection 2026
+
+</h1>
+
+<p>
+
+Welcome to our colourful Monsoon Collection!
+
+<br><br>
+
+Keep your little ones dry, comfortable and happy
+during the rainy season with our stylish rainwear.
+
+<br><br>
+
+ Waterproof Raincoats
+
+<br>
+
+ Rain Boots
+
+<br>
+
+ Colourful Umbrellas
+
+<br>
+
+ Quick Dry Clothes
+
+<br>
+
+ Premium Quality
+
+</p>
+
+<a href="#collection" class="shop-btn">
+
+ Shop Monsoon Collection
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900"
+alt="Monsoon Collection">
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORY BUTTONS ================= -->
+
+<section>
+
+<h2 class="title">
+
+ Shop by Category
+
+</h2>
+
+<div class="categories">
+
+<a href="#raincoats">
+ Raincoats
+</a>
+
+<a href="#boots">
+ Rain Boots
+</a>
+
+<a href="#umbrellas">
+ Umbrellas
+</a>
+
+<a href="#jackets">
+ Waterproof Jackets
+</a>
+
+<a href="#bags">
+ School Bags
+</a>
+
+<a href="#accessories">
+ Accessories
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;">
+
+<h2 style="font-size:42px;color:#0288D1;">
+
+ Rainy Day Essentials 
+
+</h2>
+
+<p style="margin-top:25px;
+font-size:20px;
+line-height:40px;
+color:#555;">
+
+ 100% Waterproof Products
+
+<br><br>
+
+ Soft & Comfortable Material
+
+<br><br>
+
+ Lightweight & Easy to Wear
+
+<br><br>
+
+ Cartoon Printed Designs
+
+<br><br>
+
+ Perfect for School & Travel
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COLLECTION INTRO ================= -->
+
+<section id="collection">
+
+<h2 class="title">
+
+ Featured Monsoon Collection
+
+</h2>
+
+<p style="text-align:center;
+font-size:20px;
+line-height:38px;
+color:#666;
+max-width:900px;
+margin:auto;">
+
+Explore our exclusive rainy season collection featuring
+raincoats, rain boots, waterproof jackets,
+umbrellas, school bags and colourful accessories.
+
+Every product is specially selected to make
+the rainy season safe, stylish and enjoyable
+for every child.
+
+</p>
+
+</section>
+
+<!-- ================= HOME BUTTON ================= -->
+
+<section style="text-align:center;">
+
+<a href="index.html"
+
+style="background:#0288D1;
+color:white;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">
+
+ Back to Home
+
+</a>
+
+</section><!-- ================= RAINCOATS ================= -->
+
+<section id="raincoats">
+
+<h2 class="title"> Raincoats</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700" alt="Raincoat">
+
+<h3> Cartoon Raincoat</h3>
+
+<p></p>
+
+<div class="price">999 <span class="old">1499</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Raincoat">
+
+<h3> Waterproof Raincoat</h3>
+
+<p></p>
+
+<div class="price">1199 <span class="old">1699</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700" alt="Raincoat">
+
+<h3> Hooded Raincoat</h3>
+
+<p></p>
+
+<div class="price">1399 <span class="old">1899</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Raincoat">
+
+<h3> Premium Raincoat</h3>
+
+<p></p>
+
+<div class="price">1499 <span class="old">1999</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RAIN BOOTS ================= -->
+
+<section id="boots">
+
+<h2 class="title"> Rain Boots</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Rain Boots">
+
+<h3> Waterproof Boots</h3>
+
+<p></p>
+
+<div class="price">1299 <span class="old">1799</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700" alt="Boots">
+
+<h3> Kids Rain Boots</h3>
+
+<p></p>
+
+<div class="price">1199 <span class="old">1699</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=700" alt="Boots">
+
+<h3> Cartoon Boots</h3>
+
+<p></p>
+
+<div class="price">1399 <span class="old">1899</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=700" alt="Boots">
+
+<h3> Premium Rain Boots</h3>
+
+<p></p>
+
+<div class="price">1499 <span class="old">1999</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= UMBRELLAS ================= -->
+
+<section id="umbrellas">
+
+<h2 class="title"> Colourful Umbrellas</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700" alt="Umbrella">
+
+<h3> Rainbow Umbrella</h3>
+
+<p></p>
+
+<div class="price">499 <span class="old">799</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700" alt="Umbrella">
+
+<h3> Cartoon Umbrella</h3>
+
+<p></p>
+
+<div class="price">599 <span class="old">899</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" alt="Umbrella">
+
+<h3> Folding Umbrella</h3>
+
+<p></p>
+
+<div class="price">699 <span class="old">999</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700" alt="Umbrella">
+
+<h3> Kids Umbrella</h3>
+
+<p></p>
+
+<div class="price">799 <span class="old">1099</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WATERPROOF JACKETS ================= -->
+
+<section id="jackets">
+
+<h2 class="title"> Waterproof Jackets</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Jacket">
+
+<h3> Waterproof Jacket</h3>
+
+<p></p>
+
+<div class="price">1599 <span class="old">2199</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Jacket">
+
+<h3> Rain Jacket</h3>
+
+<p></p>
+
+<div class="price">1699 <span class="old">2299</span></div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= SCHOOL BAGS ================= -->
+
+<section id="bags">
+
+<h2 class="title"> Waterproof School Bags</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="School Bag">
+
+<h3> Cartoon School Bag</h3>
+
+<p></p>
+
+<div class="price">
+
+999 <span class="old">1499</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=700" alt="School Bag">
+
+<h3> Waterproof Backpack</h3>
+
+<p></p>
+
+<div class="price">
+
+1299 <span class="old">1799</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ACCESSORIES ================= -->
+
+<section id="accessories">
+
+<h2 class="title"> Rainy Day Accessories</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?w=700" alt="Hat">
+
+<h3> Waterproof Cap</h3>
+
+<p></p>
+
+<div class="price">
+
+399 <span class="old">599</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Accessories">
+
+<h3> Rain Protection Kit</h3>
+
+<p></p>
+
+<div class="price">
+
+699 <span class="old">999</span>
+
+</div>
+
+<a href="#" class="buy"> Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MONSOON SALE ================= -->
+
+<section id="offers">
+
+<div style="background:linear-gradient(90deg,#0288D1,#26C6DA,#4FC3F7,#81D4FA);
+padding:60px;
+border-radius:30px;
+text-align:center;
+color:white;">
+
+<h2 style="font-size:48px;">
+
+ MONSOON MEGA SALE 
+
+</h2>
+
+<p style="font-size:22px;
+line-height:42px;
+margin-top:20px;">
+
+ Flat 50% OFF
+
+<br>
+
+ Buy 2 Raincoats & Get 1 Umbrella FREE
+
+<br>
+
+ Free Delivery Above 999
+
+<br>
+
+ Waterproof Collection at Best Prices
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section>
+
+<h2 class="title">
+
+ Contact Us
+
+</h2>
+
+<div style="background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+text-align:center;">
+
+<p style="font-size:20px;
+line-height:40px;
+color:#555;">
+
+ Kids Fashion World
+
+<br>
+
+ Ahmedabad, Gujarat
+
+<br>
+
+ +91 78628 30984
+
+<br>
+
+ aadhyapanchal07@gmail.com
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2 style="font-size:36px;">
+
+ Monsoon Collection
+
+</h2>
+
+<p style="margin-top:20px;">
+
+Enjoy the Rain with Style! 
+
+</p>
+
+<p style="margin-top:15px;">
+
+Designed with by Aadhya Panchal
+
+</p>
+
+<p style="margin-top:15px;">
+
+© 2026 Kids Fashion World. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

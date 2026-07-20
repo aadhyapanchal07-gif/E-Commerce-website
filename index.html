@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Fashion World</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#ffe4ec,#dff7ff,#fff7cc);
+
+overflow-x:hidden;
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff66a3;
+
+border-radius:50px;
+
+}
+
+/* Header */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+z-index:999;
+
+flex-wrap:wrap;
+
+}
+
+/* Logo */
+
+.logo{
+
+font-size:34px;
+
+font-weight:bold;
+
+color:#ff4f9a;
+
+}
+
+.logo span{
+
+color:#00bcd4;
+
+}
+
+/* Navigation */
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#444;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#ff4f9a;
+
+}
+
+/* Hero */
+
+.hero{
+
+margin-top:95px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:60px 8%;
+
+flex-wrap:wrap;
+
+background:linear-gradient(135deg,#fff,#fdf1ff);
+
+}
+
+.hero-text{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.hero-text h1{
+
+font-size:65px;
+
+color:#ff4f9a;
+
+line-height:1.2;
+
+}
+
+.hero-text h1 span{
+
+color:#00bcd4;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+margin:20px 0;
+
+color:#555;
+
+line-height:1.8;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:16px 40px;
+
+background:#ff4f9a;
+
+color:white;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:20px;
+
+transition:.4s;
+
+box-shadow:0 15px 35px rgba(255,79,154,.3);
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+background:#ff8b2d;
+
+}
+
+/* Hero Image */
+
+.hero-image{
+
+flex:1;
+
+min-width:320px;
+
+text-align:center;
+
+}
+
+.hero-image img{
+
+width:90%;
+
+max-width:500px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Search */
+
+.search{
+
+padding:50px 8%;
+
+text-align:center;
+
+}
+
+.search input{
+
+width:80%;
+
+max-width:700px;
+
+padding:18px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+outline:none;
+
+}
+
+/* Section */
+
+section{
+
+padding:70px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+color:#ff4f9a;
+
+margin-bottom:50px;
+
+}
+
+/* Category Cards */
+
+.category-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.category{
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+text-align:center;
+
+transition:.5s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.category:hover{
+
+transform:translateY(-12px);
+
+}
+
+.category img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+}
+
+.category h3{
+
+padding:20px;
+
+font-size:28px;
+
+color:#444;
+
+}
+
+.category a{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+padding:12px 28px;
+
+background:#00bcd4;
+
+color:white;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-size:18px;
+
+}
+
+/* Product Cards */
+
+.products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.product:hover{
+
+transform:scale(1.04);
+
+}
+
+.product img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+margin:18px 0;
+
+font-size:26px;
+
+}
+
+.price{
+
+color:#ff4f9a;
+
+font-size:28px;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+}
+
+.buy{
+
+display:inline-block;
+
+margin-bottom:25px;
+
+padding:14px 30px;
+
+background:#ff8b2d;
+
+color:white;
+
+border-radius:40px;
+
+text-decoration:none;
+
+}
+
+/* Offer Banner */
+
+.offer{
+
+background:linear-gradient(90deg,#ff66a3,#ffb347,#7ad7ff);
+
+color:white;
+
+text-align:center;
+
+padding:70px 20px;
+
+border-radius:30px;
+
+margin:60px 8%;
+
+}
+
+.offer h2{
+
+font-size:50px;
+
+}
+
+.offer p{
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#3b275f;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+font-size:18px;
+
+margin-top:80px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:48px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+}
+
+.search input{
+
+width:95%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+
+font-size:26px;
+
+}
+
+nav{
+
+gap:10px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.hero-text h1{
+
+font-size:38px;
+
+}
+
+.title{
+
+font-size:35px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">Kids<span>Fashion</span></div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#offers">Offers</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+<h1>Aadhya Creation</h1>
+        <h1>Cute Kids <br> <span>Fashion Store</span></h1>
+
+        <p>Welcome to Kids Fashion World!<br><br> Discover adorable cartoon clothes, colorful shoes, cute accessories and exciting seasonal collections specially designed for little superheroes, princesses and happy kids.</p>
+        <a href="#categories" class="hero-btn">Shop Now</a>
+      </div>
+
+    <div class="hero-image">
+
+        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800"
+
+        alt="Kids Fashion">
+
+    </div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search">
+
+    <input
+
+    type="text"
+
+    placeholder="Search Clothes, Shoes, Toys, Accessories..."></div>
+
+<!-- ================= WELCOME ================= -->
+
+<section>
+
+<h2 class="title">Welcome to Our Happy Kids Store.</h2>
+
+<p style="text-align:center;
+font-size:22px;
+line-height:40px;
+max-width:900px;
+margin:auto;
+color:#555;">Make every child's day brighter with our colourful collections!
+From cute baby dresses and superhero T-shirts to stylish shoes,
+raincoats, school bags, soft toys and accessories,
+everything is specially selected to make your little ones
+look adorable while staying comfortable.
+<br><br> Quality Products
+&nbsp;&nbsp;&nbsp;Fast Delivery
+&nbsp;&nbsp;&nbsp;Affordable Prices
+&nbsp;&nbsp;&nbsp;Exciting Offers Every Day</p>
+</section>
+
+<!-- ================= FEATURE BOXES ================= -->
+
+<section>
+
+<div class="category-container">
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=700">
+
+<h3>Free Delivery</h3>
+
+<p style="padding:15px;font-size:18px;">
+Free shipping on every order above 999.
+</p>
+
+</div>
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700">
+
+<h3>Big Discounts</h3>
+
+<p style="padding:15px;font-size:18px;">
+Up to 70% OFF on Kids Fashion Collection.
+</p>
+
+</div>
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700">
+
+<h3>Premium Quality</h3>
+
+<p style="padding:15px;font-size:18px;">
+Soft cotton and skin-friendly materials.
+</p>
+
+</div>
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=700">
+
+<h3>Happy Kids</h3>
+
+<p style="padding:15px;font-size:18px;">
+Thousands of smiling customers across India.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+    <h2 class="title">Shop by Categories</h2>
+
+    <div class="category-container">
+
+        <!-- Clothes -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Kids Clothes">
+
+            <h3>Kids Clothes</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Cute dresses, T-shirts, jeans and party wear.</p>
+
+            <a href="clothes.html">Explore</a>
+
+        </div>
+
+        <!-- Shoes -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Shoes">
+
+            <h3>Kids Shoes</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Stylish shoes, sandals and sneakers.</p>
+
+            <a href="shoes.html">Explore</a>
+
+        </div>
+
+        <!-- Summer -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=700" alt="Summer">
+
+            <h3>Summer Collection</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Cotton wear for cool summer days.</p>
+
+            <a href="summer.html">Explore</a>
+
+        </div>
+
+        <!-- Winter -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Winter">
+
+            <h3>Winter Collection</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Jackets, hoodies and warm sweaters.</p>
+
+            <a href="winter.html">Explore</a>
+
+        </div>
+
+        <!-- Monsoon -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=700" alt="Monsoon">
+
+            <h3>Monsoon Collection</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Raincoats, umbrellas and waterproof shoes.</p>
+
+            <a href="monsoon.html">Explore</a>
+
+        </div>
+
+        <!-- Cosmetics -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700" alt="Cosmetics">
+
+            <h3>Baby Cosmetics</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Baby shampoo, lotion and skincare.</p>
+
+            <a href="cosmetics.html">Explore</a>
+
+        </div>
+
+        <!-- Toys -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=700" alt="Toys">
+
+            <h3>Toys</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Educational and fun toys for kids.</p>
+
+            <a href="toys.html">Explore</a>
+
+        </div>
+
+        <!-- Accessories -->
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700" alt="Accessories">
+
+            <h3>Accessories</h3>
+
+            <p style="padding:0 20px 20px;color:#666;">Caps, bags, socks and cute accessories.</p>
+
+            <a href="accessories.html">Explore</a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section id="products">
+
+    <h2 class="title">Featured Products</h2>
+
+    <div class="products">
+
+        <!-- Product 1 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700" alt="Kids Dress">
+
+            <h3>Princess Dress</h3>
+
+            <p style="color:#666;padding:0 15px;">Beautiful party wear dress for little princess.</p>
+
+            <div class="price">
+                799 <del style="font-size:18px;color:gray;">1299</del>
+            </div>
+
+            <a href="clothes.html" class="buy">Buy Now</a>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Kids Shoes">
+
+            <h3>Cartoon Shoes</h3>
+
+            <p style="color:#666;padding:0 15px;">Soft and lightweight shoes for active kids.</p>
+
+            <div class="price">
+                699 <del style="font-size:18px;color:gray;">999</del>
+            </div>
+
+            <a href="shoes.html" class="buy">Buy Now</a>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=700" alt="Summer Wear">
+
+            <h3>Summer T-Shirt</h3>
+
+            <p style="color:#666;padding:0 15px;">Soft cotton T-shirt with cute cartoon print.</p>
+
+            <div class="price">
+                499 <del style="font-size:18px;color:gray;">799</del>
+            </div>
+
+            <a href="summer.html" class="buy">Buy Now</a>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=700" alt="Winter Jacket">
+
+            <h3>Winter Jacket</h3>
+
+            <p style="color:#666;padding:0 15px;">Warm hoodie for chilly winter days.</p>
+
+            <div class="price">
+                1199 <del style="font-size:18px;color:gray;">1799</del>
+            </div>
+
+            <a href="winter.html" class="buy">Buy Now</a>
+
+        </div>
+
+        <!-- Product 5 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=700" alt="Toy">
+
+            <h3>Teddy Bear</h3>
+
+            <p style="color:#666;padding:0 15px;">Cute soft teddy for kids.</p>
+
+            <div class="price">
+                599 <del style="font-size:18px;color:gray;">899</del>
+            </div>
+
+            <a href="toys.html" class="buy">Buy Now</a>
+
+        </div>
+
+        <!-- Product 6 -->
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700" alt="Cosmetics">
+
+            <h3>Baby Care Kit</h3>
+
+            <p style="color:#666;padding:0 15px;">Gentle skincare essentials for babies.</p>
+
+            <div class="price">
+                899 <del style="font-size:18px;color:gray;">1299</del>
+            </div>
+
+            <a href="cosmetics.html" class="buy">Buy Now</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SPECIAL OFFER ================= -->
+
+<section id="offers">
+
+<div class="offer">
+
+<h2>MEGA KIDS SALE</h2>
+
+<p>Flat 50% OFF on Selected Products<br><br>Buy 2 Get 1 FREE
+<br><br>Free Delivery on Orders Above 999<br><br>Happy Shopping!</p>
+
+<br>
+
+<a href="offers.html"
+style="
+background:white;
+color:#ff4f9a;
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;">View Offers</a>
+
+</div>
+
+</section>
+
+<!-- ================= BEST SELLERS ================= -->
+
+<section>
+
+<h2 class="title">Best Sellers</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=700">
+
+<h3>Summer Combo</h3>
+
+<div class="price">
+999
+</div>
+
+<a href="summer.html" class="buy">Shop</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700">
+
+<h3>Cute Accessories</h3>
+
+<div class="price">
+399
+</div>
+
+<a href="accessories.html" class="buy">Shop</a>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=700">
+
+<h3>Fashion Combo</h3>
+
+<div class="price">
+1499
+</div>
+
+<a href="clothes.html" class="buy">
+Shop
+</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= NEWSLETTER ================= -->
+
+<section>
+
+<h2 class="title"> Join Our Kids Club</h2>
+
+<div style="background:white;
+padding:50px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+text-align:center;">
+
+<h3 style="font-size:35px;color:#ff4f9a;">
+Get Amazing Offers Every Week!
+</h3>
+
+<p style="margin:20px 0;font-size:20px;color:#666;">
+
+Subscribe to receive exciting discounts,
+new arrivals and special kids fashion offers.
+
+</p>
+
+<input type="email"
+placeholder="Enter your email"
+style="width:80%;
+max-width:500px;
+padding:18px;
+border-radius:50px;
+border:2px solid #ff66a3;
+font-size:18px;
+outline:none;">
+
+<br><br>
+
+<a href="#"
+style="background:#ff4f9a;
+color:white;
+padding:15px 40px;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;">
+
+Subscribe
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;">
+
+<div style="background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);">
+
+<h3 style="color:#ff4f9a;font-size:28px;">
+ Kids Fashion World
+</h3>
+
+<p style="margin-top:20px;font-size:19px;color:#555;line-height:35px;">Ahmedabad, Gujarat <br> +91 7862830984 <br> aadhyapanchal07@gmail.com <br> 9:00 AM - 9:00 PM</p></div>
+
+<div style="background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);">
+
+<h3 style="color:#00bcd4;font-size:28px;">Why Shop With Us?
+</h3>
+
+<p style="margin-top:20px;
+font-size:19px;
+line-height:35px;
+color:#555;">
+
+ Premium Quality
+
+<br>
+
+ Safe for Children
+
+<br>
+
+ Affordable Prices
+
+<br>
+
+ Easy Returns
+
+<br>
+
+ Fast Delivery
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2 style="font-size:38px;">Kids Fashion World
+</h2>
+
+<p style="margin:20px 0;">Making Every Child Smile With Fashion</p>
+
+<div style="font-size:35px;margin:20px;">
+
+
+</div>
+
+<p>
+
+Home |
+Categories |
+Products |
+Offers |
+Contact
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Kids Fashion World
+
+<br>
+
+Designed with by Aadhya Panchal.
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
